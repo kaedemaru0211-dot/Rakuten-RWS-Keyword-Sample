@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rakuten RWS Keyword Sample</title>
+    <style>
+      :root {
+        --bg: #f6f3ec;
+        --panel: rgba(255, 252, 247, 0.92);
+        --ink: #1f2a1f;
+        --muted: #566457;
+        --accent: #1f7a4d;
+        --line: rgba(31, 42, 31, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Yu Gothic UI", "Hiragino Sans", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(31, 122, 77, 0.12), transparent 34%),
+          radial-gradient(circle at bottom right, rgba(182, 120, 34, 0.12), transparent 30%),
+          var(--bg);
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+
+      .hero,
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 18px 50px rgba(20, 30, 20, 0.08);
+      }
+
+      .hero {
+        padding: 32px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(31, 122, 77, 0.1);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      h1 {
+        margin-top: 14px;
+        font-size: clamp(32px, 5vw, 56px);
+      }
+
+      p {
+        line-height: 1.8;
+      }
+
+      .lead {
+        margin: 18px 0 0;
+        max-width: 720px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 24px;
+      }
+
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .panel {
+        padding: 24px;
+      }
+
+      .panel h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+        line-height: 1.8;
+      }
+
+      code,
+      pre {
+        font-family: Consolas, "Courier New", monospace;
+      }
+
+      pre {
+        margin: 0;
+        padding: 16px;
+        overflow-x: auto;
+        border-radius: 16px;
+        background: #132019;
+        color: #edf7ef;
+      }
+
+      .meta {
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="badge">RAKUTEN WEB SERVICE</span>
+        <h1>Rakuten RWS Keyword Sample</h1>
+        <p class="lead">
+          楽天市場商品検索APIを使って、keyword検索で商品情報を取得する最小サンプル。
+          価格比較と仕入れ候補抽出の検証用であり、スクレイピングは含まない。
+        </p>
+        <div class="meta">
+          <div>アプリ名: Rakuten RWS Keyword Sample</div>
+          <div>運営者名: Daisuke Oura</div>
+          <div>連絡先: daisu.k.oura@gmail.com</div>
+          <div>公開URL想定: https://kaedemaru0211-dot.github.io/rakuten-rws-keyword-sample/</div>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="panel">
+          <h2>アプリ名</h2>
+          <ul>
+            <li>Rakuten RWS Keyword Sample</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>用途</h2>
+          <ul>
+            <li>keyword で楽天市場の商品を検索</li>
+            <li>itemName, itemPrice, itemUrl, shopName を取得</li>
+            <li>価格比較候補の抽出を検証</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>入力</h2>
+          <ul>
+            <li>keyword</li>
+            <li>minPrice</li>
+            <li>maxPrice</li>
+            <li>availability</li>
+            <li>hits</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>出力</h2>
+          <ul>
+            <li>itemName</li>
+            <li>itemPrice</li>
+            <li>itemUrl</li>
+            <li>shopName</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>データ取得方針</h2>
+          <ul>
+            <li>楽天市場の公式APIを利用</li>
+            <li>スクレイピングは行わない</li>
+            <li>APIキーは `.env` で管理</li>
+          </ul>
+        </section>
+
+        <section class="panel" style="grid-column: 1 / -1;">
+          <h2>実行例</h2>
+          <pre>python scripts/search_keyword.py "Braun 替刃 52B" --min-price 3000 --max-price 12000 --hits 10</pre>
+        </section>
+
+        <section class="panel" style="grid-column: 1 / -1;">
+          <h2>出典</h2>
+          <p>
+            商品情報は Rakuten Web Service の楽天市場商品検索APIを通じて取得する。
+            このページは API 申請時のアプリ説明ページを兼ねる。
+          </p>
+          <p>
+            詳細は <a href="https://webservice.rakuten.co.jp/documentation/ichiba-item-search">Rakuten Ichiba Item Search API</a>
+            を参照。
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
