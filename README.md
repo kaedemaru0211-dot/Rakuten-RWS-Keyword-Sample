@@ -119,6 +119,3 @@ https://kaedemaru0211-dot.github.io
 - `localhost` やダミーURLは Application URL に使わない
 - 公式APIがある取得元は公式APIを優先する
 
-## 8. 参考
-
-- 詳細メモ: [docs/電脳せどり_楽天API申請メモ_20260630.md](docs/電脳せどり_楽天API申請メモ_20260630.md)
