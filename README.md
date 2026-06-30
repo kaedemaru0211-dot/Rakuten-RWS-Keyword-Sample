@@ -69,7 +69,7 @@ python scripts/search_keyword.py "Braun 替刃 52B" --min-price 3000 --max-price
 | GitHubユーザー名 | `kaedemaru0211-dot` |
 | 運営者名 | Daisuke Oura |
 | 連絡先 | daisu.k.oura@gmail.com |
-| 公開URL | `https://kaedemaru0211-dot.github.io/rakuten-rws-keyword-sample/` |
+| 公開URL | `https://kaedemaru0211-dot.github.io/Rakuten-RWS-Keyword-Sample/` |
 
 ## 5. 楽天申請フォームの記入例
 
@@ -82,7 +82,7 @@ Rakuten RWS Keyword Sample
 ### 5.2 Application URL
 
 ```text
-https://kaedemaru0211-dot.github.io/rakuten-rws-keyword-sample/
+https://kaedemaru0211-dot.github.io/Rakuten-RWS-Keyword-Sample/
 ```
 
 ### 5.3 Allowed websites
