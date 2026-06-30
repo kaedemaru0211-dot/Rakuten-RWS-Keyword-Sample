@@ -62,11 +62,14 @@ python scripts/search_keyword.py "Braun 替刃 52B" --min-price 3000 --max-price
 
 `index.html` をそのまま公開ページに使う。
 
-公開前にこの 3 箇所だけ書き換える。
+`index.html` に設定済みの値:
 
-- `kaedemaru0211-dot` (GitHubユーザー名)
-- `Daisuke Oura` (運営者名)
-- `daisu.k.oura@gmail.com` (連絡先)
+| 項目 | 値 |
+|---|---|
+| GitHubユーザー名 | `kaedemaru0211-dot` |
+| 運営者名 | Daisuke Oura |
+| 連絡先 | daisu.k.oura@gmail.com |
+| 公開URL | `https://kaedemaru0211-dot.github.io/rakuten-rws-keyword-sample/` |
 
 ## 5. 楽天申請フォームの記入例
 
@@ -102,13 +105,13 @@ https://kaedemaru0211-dot.github.io
 
 ## 6. 申請前チェック
 
-- Application name を申請フォームに入力した
-- `index.html` の運営者名と連絡先を埋めた
-- GitHub に push した
-- GitHub Pages を有効化した
-- 公開URLでページが開く
-- スクレイピング前提の表現を消した
-- `RAKUTEN_ACCESS_KEY` を使う実装にした
+- [ ] Application name を申請フォームに入力した
+- [x] `index.html` の運営者名と連絡先を設定した
+- [x] GitHub に push した
+- [ ] GitHub Pages を有効化した
+- [ ] 公開URLでページが開く
+- [x] スクレイピング前提の表現を消した
+- [x] `RAKUTEN_ACCESS_KEY` を使う実装にした
 
 ## 7. 注意
 
